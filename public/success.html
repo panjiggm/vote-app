@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/success.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <title>Success !</title>
+</head>
+<body>
+
+  <!-- Mulai -->
+  <div class="blog-card spring-fever">
+    <div class="title-content">
+      <h3 class="hatiga">VOTE BERHASIL !</h3>
+      <hr />
+      <div class="intro">Anda dipersilahkan meninggalkan bilik Voting</div>
+
+        <br><br>
+
+        <div class="preloader-wrapper small active">
+          <div class="spinner-layer spinner-blue">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div><div class="gap-patch">
+              <div class="circle"></div>
+            </div><div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+
+          <div class="spinner-layer spinner-red">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div><div class="gap-patch">
+              <div class="circle"></div>
+            </div><div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+
+          <div class="spinner-layer spinner-yellow">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div><div class="gap-patch">
+              <div class="circle"></div>
+            </div><div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+
+          <div class="spinner-layer spinner-green">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div><div class="gap-patch">
+              <div class="circle"></div>
+            </div><div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+
+      <div class="intro redirek">halaman ini akan me-<i>redirect</i> dalam <h3 id="countdown"> 30 </h3></div>
+    </div><!-- /.title-content -->
+
+    <br><br>
+
+  </div><!-- /.blog-card -->
+  <!-- Selesai -->
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+
+  <script>
+
+    setTimeout(function() {
+      window.location.href = "http://localhost:4321/";
+    }, 31000);
+
+    let timeleft = 30;
+    let downloadTimer = setInterval(function(){
+      timeleft--;
+      document.getElementById("countdown").textContent = timeleft;
+      if(timeleft <= 0)
+        clearInterval(downloadTimer);
+    },1000);
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+/* Card style */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic);
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #7bed9f;
+}
+
+.blog-card {
+  width: 350px;
+  height: 500px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin: 10px 0 0 -175px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+.blog-card.spring-fever {
+  background: url(https://wallpapershome.com/images/pages/pic_hs/11926.jpg) no-repeat;
+}
+
+.title-content {
+  text-align: center;
+  margin: 70px 0 0 0;
+  position: absolute;
+  z-index: 20;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.hatiga {
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: #9CC9E3;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 0;
+}
+
+hr {
+  width: 50px;
+  height: 3px;
+  margin: 20px auto;
+  border: 0;
+  background: #D0BB57;
+}
+
+.intro {
+  width: 170px;
+  margin: 0 auto;
+  color: #fff;
+  font-family: 'Droid Serif', serif;
+  font-size: 18px;
+  font-style: italic;
+  line-height: 18px;
+}
+
+.redirek {
+  margin-top: 40px;
+}
+

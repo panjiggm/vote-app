@@ -1,0 +1,110 @@
+body{
+  background: khaki;
+}
+
+#marg{
+  margin-top: 20px;
+}
+
+
+.btn-circle.btn-xl {
+    width: 70px;
+    height: 70px;
+    padding: 10px 16px;
+    border-radius: 35px;
+    font-size: 24px;
+    line-height: 1.33;
+}
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.42857;
+}
+
+
+/* Code Waktu */
+
+.clock-day:before {
+  content: var(--timer-day);
+}
+.clock-hours:before {
+  content: var(--timer-hours);
+}
+.clock-minutes:before {
+  content: var(--timer-minutes);
+}
+.clock-seconds:before {
+  content: var(--timer-seconds);
+}
+.clock-waktu:before {
+  content: var(--timer-waktu);
+}
+
+body {
+  font-family: 'Montserrat', 'sans-serif';
+  align-items: center;
+  justify-content: center;
+}
+
+.clock-container {
+  margin-bottom: 0px;
+  background-color: #1e90ff;
+  border-radius: 5px;
+  padding: 20px 10px;
+  box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.15), 0 1px 30px 7px rgba(0, 0, 0, 0.25);
+  display: flex;
+}
+.clock-col {
+  text-align: center;
+  margin-right: 30px;
+  margin-left: 30px;
+  min-width: 90px;
+  position: relative;
+}
+.clock-col:not(:last-child):before, .clock-col:not(:last-child):after {
+  content: "";
+  background-color: #ffffff;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  right: -42px;
+}
+.clock-col:not(:last-child):before {
+  top: 35%;
+}
+.clock-col:not(:last-child):after {
+  top: 50%;
+}
+.clock-timer:before {
+  color: #fff;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.clock-label {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: .7rem;
+  margin-top: 10px;
+}
+
+@media (max-width: 825px) {
+  .clock-container {
+    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .clock-col + .clock-col {
+    margin-top: 20px;
+  }
+  .clock-col:before, .clock-col:after {
+    display: none !important;
+  }
+}

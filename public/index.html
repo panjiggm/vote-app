@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>Voting App</title>
+</head>
+<body>
+
+  <!-- Start - Nav -->
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="/">
+      <img src="img/kpuu.png" width="30" height="30" class="d-inline-block align-center" alt="">
+      Vote App
+    </a>
+  </nav>
+  <!-- End - Nav -->
+
+  <div id="marg"></div>
+
+
+  <!-- Start - button Vote -->
+  <div class="container">
+    <div class="row">
+      <div class="col-6 col-md-1"></div>
+      <div class="col-6 col-md-10">
+        <div class="card text-center">
+          <div class="card-header">
+            <h2>Silahkan Vote</h2>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-3 text-center">
+                <button class="btn btn-success btn-circle btn-xl btn1" onclick="alert1();"><i class="">1</i></button>
+                <br><br><h4>paslon-satu</h4>
+              </div>
+              <div class="col-sm-3 text-center">
+                <button class="btn btn-success btn-circle btn-xl btn2" onclick="alert2();"><i class="">2</i></button>
+                <br><br><h4>paslon-dua</h4>
+              </div>
+              <div class="col-sm-3 text-center">
+                <button class="btn btn-success btn-circle btn-xl btn3" onclick="alert3();"><i class="">3</i></button>
+                <br><br><h4>paslon-tiga</h4>
+              </div>
+              <div class="col-sm-3 text-center">
+                <button class="btn btn-danger btn-circle btn-xl btn4" onclick="alert4();"><i class="">0</i></button>
+                <br><br><h4>suara-golput</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-1"></div>
+  </div>
+  <!-- End - Button Vote -->
+
+  <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+  <script src="js/sweetalert.min.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+
+    document.addEventListener('DOMContentLoaded', () =>
+      requestAnimationFrame(updateTime)
+    )
+
+    function updateTime() {
+      document.documentElement.style.setProperty('--timer-day', "'" + moment().format("dddd") + "'");
+      document.documentElement.style.setProperty('--timer-hours', "'" + moment().format("k") + "'");
+      document.documentElement.style.setProperty('--timer-minutes', "'" + moment().format("mm") + "'");
+      document.documentElement.style.setProperty('--timer-seconds', "'" + moment().format("ss") + "'");
+      document.documentElement.style.setProperty('--timer-waktu', "'" + moment().format("DD MMMM YYYY") + "'");
+      requestAnimationFrame(updateTime);
+    }
+
+    function alert1(){
+      let bleep = new Audio();
+      bleep.src = "assets/paslon-all.mp3";
+      bleep.play();
+
+      swal({
+        type: 'success',
+        title: 'Voting anda berhasil !',
+        showConfirmButton: false,
+        timer: 4000
+      });
+    }
+
+    function alert2(){
+      let bleep2 = new Audio();
+      bleep2.src = "assets/paslon-all.mp3";
+      bleep2.play();
+
+      swal({
+        type: 'success',
+        title: 'Voting anda berhasil !',
+        showConfirmButton: false,
+        timer: 4000
+      });
+    }
+
+    function alert3(){
+      let bleep3 = new Audio();
+      bleep3.src = "assets/paslon-all.mp3";
+      bleep3.play();
+
+      swal({
+        type: 'success',
+        title: 'Voting anda berhasil !',
+        showConfirmButton: false,
+        timer: 4000
+      });
+    }
+
+    function alert4(){
+      let bleep4 = new Audio();
+      bleep4.src = "assets/paslon-all.mp3";
+      bleep4.play();
+
+      swal({
+        type: 'success',
+        title: 'Voting anda berhasil !',
+        showConfirmButton: false,
+        timer: 4000
+      });
+    }
+
+  </script>
+</body>
+</html>
